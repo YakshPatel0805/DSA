@@ -1,0 +1,77 @@
+Day-1 : Class, Methods and Function:
+==================================
+Class:
+- all the class name should starts with capital letters.
+
+
+Methods:
+- writing a function inside a class called method.
+- all the methods name of the methods should be small.
+
+
+decleration, defination and calling
+- decleration and defenation should be out of the main class.
+- calling should be inside  a class.
+
+
+Function:
+
+Syntax: (function)
+	function_type function_name( parameter ){
+		// decleration, defenation
+	}
+
+Function types: except void remaining types return the data. 
+
+
+
+Day-2 : static block and constructor
+====================================
+
+Constructor:
+- Constructor are used to initilize the oobject. For every class there will be default Constructor. Whenever e create an object Counstructor will be called.
+- Constructor having class name and method properties.
+
+
+Static Block:
+- It is created with static Keyword.
+- It will call automitacally.
+
+example:
+class Demo{
+	static{
+		System.out.print("Static Block");
+	}
+	Demo(){
+		System.out.print("Constructor");
+	}
+}
+public class q2{
+	public static void main()(String args[]){
+		Demo d1 = new Demo();
+		Demo d2 = new Demo();
+	}
+}
+
+
+Static Method:
+- For static method no need to call with object, directly call with Class name, here static will act as instance.
+
+
+Conditional Statements:
+- if else, else if laddere, switch case
+- these are used to check the condition and print that relevent block in constant time.
+
+
+Control Statements:
+Entry Control : for loop, while loop
+
+Syntax (for loop) : for(starts; end; difference){}
+       (while loop): start; while(end){ difference }
+
+- when we know the range we use for loop, when we don't know the range we use while loop. 
+
+
+Exit Control : do while loop
+
+Jump Control : break, continue, return, throw, goto
