@@ -66,7 +66,7 @@ Conditional Statements:
 Control Statements:
 Entry Control : for loop, while loop
 
-Syntax (for loop) : for(starts; end; difference){}
+Syntax (for loop) : for(starts; end; difference){  }
        (while loop): start; while(end){ difference }
 
 - when we know the range we use for loop, when we don't know the range we use while loop. 
@@ -75,3 +75,36 @@ Syntax (for loop) : for(starts; end; difference){}
 Exit Control : do while loop
 
 Jump Control : break, continue, return, throw, goto
+
+
+Day-4 : Switch Case Statements
+==============================
+
+- cases have to be same type as expressions, must be constant or litral.
+- duplicates cases are not allowed.
+- break is used to terminate the sequence.
+- if break is not used, it will continue to next case.
+- default will execute when none of above does.
+- if default is not at the end, put break after it.
+
+Syntax: 
+switch(expression){
+	case :
+		Statements;
+		break;
+	default:
+		Statements;
+}
+
+# Ternary Operator:
+	( condition ) ? Statement1 : Statement2;
+	(n == 1) ? print("Yes) : print("No")
+
+
+For-Each loop:
+- In, collection we don't have index value, in those situation we have to use for-each loop.
+Syntax:
+	for( var: arr ){
+		Statements;
+	}
+
