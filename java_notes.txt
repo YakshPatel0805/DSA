@@ -108,3 +108,60 @@ Syntax:
 		Statements;
 	}
 
+Day-5 : Arrays
+===============
+
+Array : it is a data structure which collect similar type of data in continous location.
+- In, C and C++ we have poiters so, element will be stored in continous format, while in Java we have not pointers so it will might store in random memory location.
+
+Syntax:
+	datatype[] array_name;
+
+Premitive : - They are can't be splitted oe divided.
+			- int, float, char ...
+Non-Premitive : - They can be divided.
+				- String, objects(created by user)
+				- class node{
+					int data;
+					node next;
+				}
+
+- all the objects will be stored in heap memory.
+- all the references will be stored in stack memory.
+- stack memory having less space compare to heap.
+- instade of creating multiple variable create array.
+- if we create multiple variable to get the data simply we can print the variable, when it comes to array if you want to print the data we can print using index value and default index value starts with 0.
+- in, array decleration and initilization happened in same line," int[] arr = {1,2,3,4}"
+- to get the length of the array we have a method called "array.length".
+- to get the length of the string we have a method called "str.length()".
+
+snake case: array_name
+camel case : arrayName
+
+- In, java it is prefer to use camel case to write production level codes.
+
+# Types of Printng Formats:
+-----------------------------
+1. using simple for loop:
+	for(int i =0; i<arr.length;i++){
+		System.out.print(arr[i]);
+	}
+
+2. using for each loop:
+	for(int i : arr){
+		System.out.print(i + " ");
+	}
+	- here we don't need index value.
+
+3. using Arrays.toString() method:
+	System.out.print(Arrays.toString(arr));
+
+
+Declaring size of array and initilization by user:
+---------------------------------------------------
+
+- array having fixed size, if we decler it can't be changes.
+	int[] arr = new int[5];
+- with the help of new keyword actual object is created into heap memory.
+- whenever you assign or trying to get nth value of array it will throw Exception called "Array out of bond".
+
