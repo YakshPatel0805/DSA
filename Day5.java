@@ -53,3 +53,27 @@ class Day5{
         System.out.println("Highest Value: " +maxVal+" Second Highest Value: "+secondHighest);
     }
 }
+
+
+    // check array is sorted or not
+        // int[] arr = {1,2,5,4,9};
+        // for (int i = 0; i<(arr.length)-1;i++){
+        //     if (arr[i] > arr[i+1]){
+        //         System.out.print("Not sorted ");
+        //         break;
+        //     }
+        // }
+        
+
+    // check if element is present in the array or not
+        // int ele = 10;
+        // for(int i = 0; i<arr.length;i++){
+        //     if (arr[i] == ele){
+        //         System.out.print("Element present");
+        //         break;
+        //     }
+        // }
+        // System.out.print("Element is not present");
+        
+        
+    // move all zeroes to the end of the array when given an array of 0's and 1's
