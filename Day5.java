@@ -32,4 +32,24 @@ class Day5{
     }
 }
 
-
+// print highest and second highest number in an array.
+import java.util.*;
+class Day5{
+    public static void main(String args[]){
+        int arr[] = {1,5,7,2,9};
+        int maxVal = arr[0];
+        int secondHighest = arr[0];
+        // Scanner sc = new Scanner(System.in);
+        for(int i=1; i<arr.length; i++){
+            if(arr[i] > maxVal){
+                maxVal = arr[i];
+            }
+        }
+        for(int i = 1; i<arr.length;i++){
+            if (arr[i] > secondHighest && arr[i] != maxVal){
+                secondHighest = arr[i];
+            }
+        }
+        System.out.println("Highest Value: " +maxVal+" Second Highest Value: "+secondHighest);
+    }
+}
