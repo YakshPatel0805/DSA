@@ -77,6 +77,25 @@ Exit Control : do while loop
 Jump Control : break, continue, return, throw, goto
 
 
+Day-3 : Pattern Printing
+========================
+
+* Nested Loops *
+
+- loops inside the loops.
+- There are three type of Solutions for Any Problem.
+	1.Brute Force
+	2.Better
+	3.Optimal Solutions
+
+- For Brute Force Most of the Solutions can be Written using 2 loops.
+
+- After This For Every Pattern Problems, we must Know 3 things
+	1.How many rows will Print.
+	2.How many columns are Needed.
+	3.must Know what to print and what not to print.
+
+
 Day-4 : Switch Case Statements
 ==============================
 
