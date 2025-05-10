@@ -77,3 +77,20 @@ class Day5{
         
         
     // move all zeroes to the end of the array when given an array of 0's and 1's
+        // import java.util.*;
+        // class Main {
+        //     public static void main(String[] args) {
+        //         int[] arr = {1,0,1,0,1,0};
+        //         int swap = 0;
+        //         for (int i = 0;i<arr.length - 1;i++){
+        //             for(int j = i+1; j<arr.length;j++){
+        //                 if(arr[i] > arr[j]){
+        //                     swap = arr[i];
+        //                     arr[i] = arr[j];
+        //                     arr[j] = swap;
+        //                 }
+        //             }
+        //         }
+        //         System.out.print(Arrays.toString(arr));
+        //     }
+        // }
