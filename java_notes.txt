@@ -195,4 +195,31 @@ Day-6 : 2D Arrays
 - here row values are mandatory while columns can be anything.
 - first [] represents row and another is for column.
 - each row will act as an individual array.
-- 
+
+
+Day-7 : ArrayList
+===============================
+
+- Array have fixed size, once we declare we can't change.
+- to incres ssize dynamically we have to use ArrayList, it belongs to Collection Framework.
+- Framework contains pre define methods and programs.
+
+Syntax:
+	List<Wrapper Class> arraylist_name = new ArrayList<>();
+
+- here, List is an interface, it contains incomplement methods.
+- Wrapper class is not a premitive datatype, it's a Class.
+- in, Collection we have to use Wrapper Class only.
+- <> it calls generics.
+- ArrayList is a Class, which contains complete methods.
+- as it is a class you have to import ArrayList Class, can access all the pre-define methods present in ArrayList.
+
+
+ArrayList Dynamic Nature:
+- when an element is trying to add, size get doubled.
+- when an element is trying to delete, size get half.
+
+
+Sub-Arrays:
+------------
+- an element of an array are also part of sub-arrays in continious manner.
