@@ -223,3 +223,19 @@ ArrayList Dynamic Nature:
 Sub-Arrays:
 ------------
 - an element of an array are also part of sub-arrays in continious manner.
+
+
+Day-8 : Recursion
+====================
+
+- function calls itself till it's meet base condition called Recursion.
+- there are two types of Recursion, i) function calling same function. ii) function calling another function.
+- if we didn't wriite base condition properly we get Exception stackoverflow
+- recursions are use to break the code.
+- for every recursive call element get push into stack, after reaching base condition element will get pop.
+
+
+passed by value and passed by reference.
+----------------------------------------
+
+- In java, we don't have pointers so we can't references.
