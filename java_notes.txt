@@ -238,4 +238,34 @@ Day-8 : Recursion
 passed by value and passed by reference.
 ----------------------------------------
 
-- In java, we don't have pointers so we can't references.
+- In java, we don't have pointers so we can't pass references.
+
+
+Day-9 : Recursion (String)
+==========================
+
+Q1: from a given string we have to a character using recursion.
+	- assume that we starting from two strings, initially output string is empty.
+	- we have few steps;
+		- take first character from a string and store in char variable.
+		- check the variable with our targeted character, if it matches return output string else, append the character to the output string.
+		- slice the string by one character (using substring method).
+		- make a recursive call where, base condition is input string become empty.
+
+Q2: from a given string skip a word, print rest of character.
+	- using startsWith() methods.
+
+
+Two Pointers approach:
+-----------------------
+
+- initilization of pointers
+- if you star first pointer at 0 and second pointer at lasst index, whenever both pointer cross each other break the loop, in between do relevent operations.
+
+Q. reverse an array using two pointers.
+	- first, initilize two pointers at 0 index and last index.
+	- swap both values.
+	- increment i pointer and decrement j pointer.
+	- when both pointer cross eeach there break the loop.
+
+	
