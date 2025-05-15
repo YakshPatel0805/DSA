@@ -151,7 +151,7 @@ Non-Premitive : - They can be divided.
 - instade of creating multiple variable create array.
 - if we create multiple variable to get the data simply we can print the variable, when it comes to array if you want to print the data we can print using index value and default index value starts with 0.
 - in, array decleration and initilization happened in same line," int[] arr = {1,2,3,4}"
-- to get the length of the array we have a method called "array.length".
+- to get the length of the array we have a method called "array.length", here ".length" is a field not method.
 - to get the length of the string we have a method called "str.length()".
 
 snake case: array_name
@@ -198,7 +198,7 @@ Day-6 : 2D Arrays
 
 
 Day-7 : ArrayList
-===============================
+===================
 
 - Array have fixed size, once we declare we can't change.
 - to incres ssize dynamically we have to use ArrayList, it belongs to Collection Framework.
@@ -229,7 +229,8 @@ Day-8 : Recursion
 ====================
 
 - function calls itself till it's meet base condition called Recursion.
-- there are two types of Recursion, i) function calling same function. ii) function calling another function.
+- there are two types of Recursion, i. function calling same function. 
+									ii. function calling another function.
 - if we didn't wriite base condition properly we get Exception stackoverflow
 - recursions are use to break the code.
 - for every recursive call element get push into stack, after reaching base condition element will get pop.
@@ -268,4 +269,41 @@ Q. reverse an array using two pointers.
 	- increment i pointer and decrement j pointer.
 	- when both pointer cross eeach there break the loop.
 
-	
+
+Day-10 : Strings
+=================
+
+- Strings are classes.
+- Arrays are objects.
+- the  sequence of character calles Strings.
+- String are immutable.
+- all the array objects will be created in heap memory but  Strings are created inside heap memory in Pool.
+- Once, a string got created, are fixed.
+
+example: String a = "Hello";
+		String b = "Hello";
+		System.out.print(a == b);
+		- here both variable point at same memory location, so it gives output "true".
+
+		String a = new String("Hello");
+		String b = new String("Hello");
+		System.out.print(a == b);
+		- here for both variable two different objects are created which point at different memory location, so it gives output "false".
+
+- in, strings "equals()" method is used to compare data and "==" is used to compare address.
+
+
+Subset
+-------
+
+- for a given array we have to possible arrays it should be in a sequence but not continious.
+- in an array if we have n numbers of element we get 2^n subset.
+
+
+Backtracking
+--------------
+
+- In recursion, we have two possibility either if or else.
+- In Backtracking, we have multiple possibility.
+- most of the problems, whenever we reach base case we have to print all basecase elements and remove last element in every recursive call.
+- 
