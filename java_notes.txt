@@ -306,4 +306,33 @@ Backtracking
 - In recursion, we have two possibility either if or else.
 - In Backtracking, we have multiple possibility.
 - most of the problems, whenever we reach base case we have to print all basecase elements and remove last element in every recursive call.
-- 
+
+
+Day-11 : Duch National Flag Algorithm.
+=======================================
+
+- initialize three pointers, l at 0 index,m at 0 index and h at arr.length-1 position.
+- the elements between m, h should be sorted.
+- if arr[m] == 0, swap values of m, l and increase m, l.
+- if arr[m] == 2, swap values of m, h and decrease h, increase l.
+- if arr[m] == 1, increase m.
+
+
+Collection Framework :
+----------------------
+
+    List     |       set       |      map
+--------------------------------------------------
+- ArrayList  | - HashSet       | - HashMap
+- LinkedList | - LinkedHashSet | - LinkedHashMap
+- Vector     | - TreeSet       | - TreeMap
+
+- List, Set and Map are interfaces, rest of the all are classes.
+- Interface Contains incomplement Methods.
+- List is Ordered which allows duplicates.
+- Set is unordered which won't accepts duplicates.
+- Maps contains key-value pairs.
+
+
+Syntax:	Set<Integer> values = new HashSet<>();
+
