@@ -18,10 +18,9 @@ class Day15{
 class Day15{
     public static void main(String[] args){
         int target = 7;
-        k = 4;
-        int[] arr = {6,7,8,9,1,2,3,4,5};
+        int[] arr = {1,2,3,4,5,6,7,8,9,10};
 
-        int result = binarySearch(arr, target, k);
+        int result = binarySearch(arr, target);
         if(result != -1){
             System.out.println("Found at index: " + result);
         } else {
@@ -47,13 +46,6 @@ class Day15{
         return -1;
     }
 }
-
-
-// roteted sorted binary search
-
-
-
-
 
 
 // lowerbound and upperbbound
@@ -86,6 +78,7 @@ class Day15{
         }
         return arr[left];
     }
+
     public static int upperBound(int[] arr, int target){
         int left = 0;
         int right = arr.length - 1;
@@ -103,4 +96,47 @@ class Day15{
     }
 }
 
-// first and last occurence
+// first and last occurence using linear search
+class Day15{
+    public static void main(String[] args){
+        int target = 7;
+        int[] arr = {1,2,3,4,6,6,7,7,7,9};
+
+        int firstOccurrence = firstOccurrence(arr, target);
+        int lastOccurrence = lastOccurrence(arr, target);
+
+        System.out.println("First Occurrence at index: " + firstOccurrence);
+        System.out.println("Last Occurrence at index: " + lastOccurrence);
+    }
+
+    public static int firstOccurrence(int[] arr, int target){
+        int left = 0;
+        int right = arr.length - 1;
+
+        while(left < right){
+            if (arr[left] == target){
+                return left;
+            }
+            else{
+                left++;
+            }
+        }
+        return 0;
+    }
+
+     public static int lastOccurrence(int[] arr, int target){
+        int left = 0;
+        int right = arr.length - 1;
+
+        while(left < right){
+            if (arr[right] == target){
+                return right;
+            }
+            else{
+                right--;
+            }
+        }
+        return 0;
+    }
+}
+

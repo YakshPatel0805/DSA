@@ -421,3 +421,5 @@ Binary Search:
 		- else, element present in right half, right pointer remains same and left comes to mid + 1.
 		- if a[mid] is greater to a[l], left half is sorted and if target lies in between a[mid] and a[r]  means in right half so right pointer remains same and left comes to mid + 1.
 		- else, element present in left half, left pointer remains same and right comes to mid - 1.
+
+
