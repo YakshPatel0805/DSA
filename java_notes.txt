@@ -423,3 +423,108 @@ Binary Search:
 		- else, element present in left half, left pointer remains same and right comes to mid - 1.
 
 
+
+Maximum product of sub array elements:
+---------------------------------------
+
+example:
+	arr = [2,3,-6,4]
+	- start product variable with 1.
+	- in the sub array, if we have even positive number product will be positive.
+	- if we have odd negative numbers product will be negative.
+	- in the sub array if we have at least "0", start product variable with 1.
+	- if we have negative value, product of prefix and sufix element will be positive.
+	- initialize maximum variable to extreme negative.
+
+
+
+88, 4, 56, 15, 229, 857, 1358, 424, 162, 1011 = leetcode
+--------------------------------------------------------
+
+leetcode problem - koko eating bananas
+
+- whatever max element in array, check for that.
+- initilize left pointer to 0, right to max.
+- get the middle value, divide all array elements, if sum of all all ceil values less then or equal to target, eliminate right half.
+- change the right pointer to mid - 1.
+- else, change left pointer to mid + 1 by eliminate left half.
+- return value of left.
+
+
+OOPS (Object Oriented Programming):
+====================================
+
+4 pillers of OOPS:
+	- inheritance
+	- abstraction
+	- encapesulation
+	- polymorphism
+
+- to achieve these property you need class, object, constructor, interface.
+
+Class: class is an virtual entity and blue print for object.
+Object: instance of a class
+		we can call methods which present in that particular class by creating object for that class.
+Constructor: initialize an object
+			- Default Constructor.
+				it is for every class.
+
+			- Parameterized Constructor.
+				it contains some parameter.
+
+
+Inheritance:
+-------------
+	- we use extend keyword for inheritance.
+	- using implement keyword we can inheritate properties from interfaces.
+
+
+	single inheritance:
+		- the property are inheritade by child class from parent class.
+
+	multiple inheritance:
+		- property are inheritade from multiple parent classes.
+
+	multilevel inheritance:
+		- property are inheritade to parent class from grandparent class and the property are inheritade to child class from parent class.
+
+	hyrarchi inheritance:
+		- properties are inheritade to multiple child classes.
+
+
+Polymorphism:
+--------------
+	- same method appearing multiple times.
+	- main method can be overridden with different parameters.
+
+	- method Overloading:
+		- in a same class if we have multiple methods with same name, different parameter.
+
+	- method Overriding:
+		- in child class if we declare a method which present in parent class.
+		- with same method name and same parameter.
+
+
+Encapesulation:
+----------------
+	- binding method and data , hiding sensetive data 
+	- if variable are private we can't access outside the class, if want to access use methods.
+
+
+Abstraction:
+-------------
+	- hiding implementation, showing essential details.
+	- if you to make method abstract use "abstract" keyword.
+	- if we have abstract method we have to make the class abstract.
+	- they are incomplete methods.
+
+	- Data abstraction
+	- Function abstraction
+	- Procedual abstraction
+	- Control abstraction
+
+
+Interface:
+-----------
+	- it contains all abstract methods.
+	- we can't create object for interface
