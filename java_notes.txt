@@ -71,9 +71,7 @@ Syntax (for loop) : for(starts; end; difference){  }
 
 - when we know the range we use for loop, when we don't know the range we use while loop. 
 
-
 Exit Control : do while loop
-
 Jump Control : break, continue, return, throw, goto
 
 
@@ -207,7 +205,7 @@ Day-7 : ArrayList
 Syntax:
 	List<Wrapper Class> arraylist_name = new ArrayList<>();
 
-- here, List is an interface, it contains incomplement methods.
+- here, List is an interface, it contains incompelet methods.
 - Wrapper class is not a premitive datatype, it's a Class.
 - in, Collection we have to use Wrapper Class only.
 - <> it calls generics.
@@ -328,7 +326,7 @@ Collection Framework :
 - Vector     | - TreeSet       | - TreeMap
 
 - List, Set and Map are interfaces, rest of the all are classes.
-- Interface Contains incomplement Methods.
+- Interface Contains incompelet Methods.
 - List is Ordered which allows duplicates.
 - Set is unordered which won't accepts duplicates.
 - Maps contains key-value pairs.
@@ -477,7 +475,7 @@ Inheritance:
 -------------
 	- we use extend keyword for inheritance.
 	- using implement keyword we can inheritate properties from interfaces.
-
+	- multiple Inheritance is not possible in java (Ambiguity).
 
 	single inheritance:
 		- the property are inheritade by child class from parent class.
@@ -527,4 +525,27 @@ Abstraction:
 Interface:
 -----------
 	- it contains all abstract methods.
-	- we can't create object for interface
+	- we can't create object for interface.
+	- abstract methods are incompelet.
+
+
+Access Modifier: 				where to accessable
+
+				  public 		 private		protected			default
+within class		+				+				+					+
+within file			+				-				+					+
+within package		+				-				+					+
+outside package		+				-				+					-
+parent class		+				-				-					-
+child class			+				-				+					-
+
+Architecture:
+	Packages -> Files -> Class -> Methods ->Statements.
+
+
+Abstraction:
+- incompelet means, defenation is missing in a method.
+- for all abstract method we should use abstract keyword.
+- if a class contains abstract methods then you have to mention abstract before the class.
+- interface contains only abstract methods.
+- to implementing interface access modifier should be public.

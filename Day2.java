@@ -69,31 +69,11 @@ class Student{
 }
 
 
+
+// reverse a number 123 -> 321
 class Main{
     public static void main(String args[]){
-        // for loop and while loop
-        // int n = 5;
-        // for (int i=1;i<=10;i++){
-        //     System.out.println(n+" * "+i+ " = "+n*i);
-        // }
-        // int i = 1;
-        // while(i!=11){
-        //     System.out.println(n+" * "+i+ " = "+n*i);
-        //     i++;
-        // }
 
-
-        // factorial using for loop
-        // int i = 1;
-        // int fact = 1;
-        // while(i <= n){
-        //     fact = fact * i;
-        //     i++;
-        // }
-        // System.out.print(fact);
-        
-
-        // reverse a number 123 -> 321
         int num = 123;
         int temp = 0;
         while(num > 0){
