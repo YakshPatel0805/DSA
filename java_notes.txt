@@ -549,3 +549,20 @@ Abstraction:
 - if a class contains abstract methods then you have to mention abstract before the class.
 - interface contains only abstract methods.
 - to implementing interface access modifier should be public.
+
+
+
+================================= Data Structure an Algorithm ===================================
+
+Linear Data Structure:
+LinkedList:
+	- collection of similar type of data in random allocation.
+	- Types of LinkedList:
+		- Single LinkedList    1 -> 2 -> 3 -> 4
+		- Doubly LinkedList    1 <-> 2 <-> 3 <-> 4
+		- Circular LinkedList   1 -> 2 -> -> 3 -> 4 -> 1
+
+	Advantages: 
+		- faster insertion and deletion
+
+	
