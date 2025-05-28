@@ -235,62 +235,6 @@ class Main{
         }
         return length;
     }
-    // delete node at position from back in LinkedList
-    // static Node deleteNodeAtPositionFromBack(Node head, int position){
-    //     int startLength = get_length(head) - position + 1;
-    //     if (head == null) return null;
-    //     if (startLength == 1){
-    //         head = head.next;
-    //         return head;
-    //     }
-    //     else{
-    //         Node prev = head;
-    //         Node temp = head;
-    //         while(startLength != 1){
-    //             prev = temp;
-    //             temp = temp.next;
-    //             startLength--;
-    //         }
-    //         prev.next = temp.next;
-    //         temp.next = null;
-    //         return head;
-    //     }
-    // }
-
-
-    // segregate even and odd nodes in LinkedList
-    static Node segregateEvenOdd(Node head){
-        if (head == null) return null;
-        Node evenHead = null, evenTail = null;
-        Node oddHead = null, oddTail = null;
-
-        Node current = head;
-        while(current != null){
-            if (current.data % 2 == 0){
-                if (evenHead == null){
-                    evenHead = current;
-                    evenTail = evenHead;
-                } else {
-                    evenTail.next = current;
-                    evenTail = evenTail.next;
-                }
-            } else {
-                if (oddHead == null){
-                    oddHead = current;
-                    oddTail = oddHead;
-                } else {
-                    oddTail.next = current;
-                    oddTail = oddTail.next;
-                }
-            }
-            current = current.next;
-        }
-
-        if (evenTail != null) evenTail.next = oddHead;
-        if (oddTail != null) oddTail.next = null;
-
-        return evenHead != null ? evenHead : oddHead;
-    }
 
     public static void main(String[] args) {
         // int[] arr = {1, 2, 3, 4, 5};
