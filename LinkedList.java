@@ -225,6 +225,94 @@ class Main{
         return head;
     }
 
+    // check if LinkedList is palindrome
+    static boolean isPalindrome(Node head){
+        if (head == null || head.next == null) return true;
+
+        // Find the middle of the LinkedList
+        Node slow = head;
+        Node fast = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        // Reverse the second half of the LinkedList
+        Node prev = null;
+        Node current = slow;
+        while(current != null){
+            Node nextNode = current.next;
+            current.next = prev;
+            prev = current;
+            current = nextNode;
+        }
+
+        // Compare the first half and the reversed second half
+        Node firstHalf = head;
+        Node secondHalf = prev; // Reversed second half
+        while(secondHalf != null){
+            if(firstHalf.data != secondHalf.data) return false;
+            firstHalf = firstHalf.next;
+            secondHalf = secondHalf.next;
+        }
+        return true;
+    }
+
+    // check if LinkedList is Sorted or not
+    static boolean isSorted(Node head){
+        if (head == null || head.next == null) return true;
+
+        Node current = head;
+        while(current.next != null){
+            if(current.data > current.next.data) return false;
+            current = current.next;
+        }
+        return true;
+    }
+
+    // add two numbers in linkedlist
+    static Node addTwoNumbers(Node l1, Node l2) {
+        Node dummyHead = new Node(0);
+        Node p = l1, q = l2, current = dummyHead;
+        int carry = 0;
+
+        while (p != null || q != null || carry > 0) {
+            int x = (p != null) ? p.data : 0;
+            int y = (q != null) ? q.data : 0;
+            int sum = carry + x + y;
+            carry = sum / 10;
+            current.next = new Node(sum % 10);
+            current = current.next;
+
+            if (p != null) p = p.next;
+            if (q != null) q = q.next;
+        }
+        return dummyHead.next;
+    }
+
+    // merge two sorted linked lists
+    static Node mergeTwoSortedLinkedLists(Node l1, Node l2) {
+        Node dummyHead = new Node(0);
+        Node current = dummyHead;
+
+        while (l1 != null && l2 != null) {
+            if (l1.data < l2.data) {
+                current.next = l1;
+                l1 = l1.next;
+            } else {
+                current.next = l2;
+                l2 = l2.next;
+            }
+            current = current.next;
+        }
+
+        if (l1 != null) current.next = l1;
+        if (l2 != null) current.next = l2;
+
+        return dummyHead.next;
+    }
+    
+
     // find length of LinkedList
     static int get_length(Node head){
         int length = 0;
