@@ -566,3 +566,80 @@ LinkedList:
 		- faster insertion and deletion
 
 	
+Sorting:
+========
+						Best Case		Avg Case		Worst Case
+	- Bubble Sort		  O(n)			O(n^2)				O(n^2)
+	- Selection Sort	  O(n^2)		O(n^2)				O(n^2)
+	- Insertion Sort	  O(n)			O(n^2)				O(n^2)
+	- Merge Sort		O(n log	n)		O(n log	n)			O(n log	n)
+	- Quick Sort		O(n log	n)		O(n log	n)			O(n^2)
+
+
+
+- Count Sort
+- Heap Sort
+- Radix Sort
+
+Bubble Sort:
+	- it will compare the adjustant element and swap accordingly.
+	- after an itteratiion the gratest element go to end.
+	steps:
+		- take an input array with unsorted elements.
+		- initilize i at 0 and j to the next of i.
+		- outer loop will run till n-2 and inner loop will run till n-1.
+		- compare the both element and swap according to need.
+
+Selection Sort:
+	- here, we selecting an element and place at right place.
+	- for sure, we have to check each element.
+
+
+
+Stacks and Quques:
+==================
+
+Stacks:
+	 - it is a special data structure which follows "Last In First Out", which comes under linear data structure.
+	 - we will get the outputs in constant time for all stack operations O(1).
+
+	stack methods:
+		push(): adding element into the stack.
+			- initialize top by -1, increase top by 1.
+
+		pop(): deleting last element in the stack.
+			- just decrease top by 1.
+
+		peek(): getting the top-most element in the stack.
+			- return stack[top].
+
+		isEmpty(): check that stack is empty or not.
+			- if top is -1, return true.
+
+		display(): to print the stack elements.
+			
+		size(): get the size of a stack.
+			- return top + 1.
+
+
+Quques:
+ 	- it is a special data structure which follows "First In First Out", which comes under linear data structure.
+	- it helps to solve heaps problems.
+	
+	Single ended Queue:
+		- operations perfomes from single end.
+
+	Double ended Queue:
+		- operations perfomes from both ends.
+
+	Priority Queue:
+		Min Quque:
+			- whatever order of elements you added, elements will arange in assending order.
+		
+		Max Quque:
+			- whatever order of elements you added, elements will arange in desending order.
+
+	stack methods:
+		offer(): add element into queue.
+		poll(): delete element from queue.
+		display(): print all element of the queue.
