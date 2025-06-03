@@ -13,19 +13,19 @@ public class CircularQueue {
     // Enqueue operation
     public void enqueue(int data) {
         if ((rear + 1) % size == front) {
-            System.out.println("Queue is Full (Overflow)");
+            System.out.println("Queue is Full");
             return;
         }
         if (front == -1) front = 0;
         rear = (rear + 1) % size;
         queue[rear] = data;
-        System.out.println("Inserted: " + data);
+        // System.out.println("Inserted: " + data);
     }
 
     // Dequeue operation
     public int dequeue() {
         if (front == -1) {
-            System.out.println("Queue is Empty (Underflow)");
+            System.out.println("Queue is Empty");
             return -1;
         }
 
@@ -36,7 +36,7 @@ public class CircularQueue {
         } else {
             front = (front + 1) % size;
         }
-        System.out.println("Removed: " + data);
+        // System.out.println("Removed: " + data);
         return data;
     }
 
