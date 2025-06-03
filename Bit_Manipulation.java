@@ -52,3 +52,13 @@ class Main{
     }
 }
 
+// convert ith bit as set-bit
+class Main{
+    public static void main(String args[]){
+        int n = 23; 
+        int i = 1; 
+        // using left shift
+        n = n &(~(1<< i));
+        System.out.print(n);
+    }
+}
