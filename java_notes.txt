@@ -1,73 +1,64 @@
 Day-1 : Class, Methods and Function:
 ==================================
 Class:
-- all the class name should starts with capital letters.
-
+	- all the class name should starts with capital letters.
 
 Methods:
-- writing a function inside a class called method.
-- all the methods name of the methods should be small.
-
+	- writing a function inside a class called method.
+	- all the methods name of the methods should be small.
 
 decleration, defination and calling
-- decleration and defenation should be out of the main class.
-- calling should be inside  a class.
+	- decleration and defenation should be out of the main class.
+	- calling should be inside  a class.
 
 
 Function:
-
-Syntax: (function)
-	function_type function_name( parameter ){
-		// decleration, defenation
-	}
+	Syntax: (function)
+		function_type function_name( parameter ){
+			// decleration, defenation
+		}
 
 Function types: except void remaining types return the data. 
 
 
-
 Day-2 : static block and constructor
 ====================================
-
 Constructor:
-- Constructor are used to initilize the oobject. For every class there will be default Constructor. Whenever e create an object Counstructor will be called.
-- Constructor having class name and method properties.
-
+	- Constructor are used to initilize the oobject. For every class there will be default Constructor. Whenever e create an object Counstructor will be called.
+	- Constructor having class name and method properties.
 
 Static Block:
-- It is created with static Keyword.
-- It will call automitacally.
+	- It is created with static Keyword.
+	- It will call automitacally.
 
 example:
-class Demo{
-	static{
-		System.out.print("Static Block");
+	class Demo{
+		static{
+			System.out.print("Static Block");
+		}
+		Demo(){
+			System.out.print("Constructor");
+		}
 	}
-	Demo(){
-		System.out.print("Constructor");
+	public class q2{
+		public static void main()(String args[]){
+			Demo d1 = new Demo();
+			Demo d2 = new Demo();
+		}
 	}
-}
-public class q2{
-	public static void main()(String args[]){
-		Demo d1 = new Demo();
-		Demo d2 = new Demo();
-	}
-}
-
 
 Static Method:
-- For static method no need to call with object, directly call with Class name, here static will act as instance.
-
+	- For static method no need to call with object, directly call with Class name, here static will act as instance.
 
 Conditional Statements:
-- if else, else if laddere, switch case
-- these are used to check the condition and print that relevent block in constant time.
-
+	- if else, else if laddere, switch case
+	- these are used to check the condition and print that relevent block in constant time.
 
 Control Statements:
-Entry Control : for loop, while loop
+	Entry Control : for loop, while loop
 
-Syntax (for loop) : for(starts; end; difference){  }
-       (while loop): start; while(end){ difference }
+	Syntax (for loop) : for(starts; end; difference){  }
+		(while loop): start; while(end){ difference }
 
 - when we know the range we use for loop, when we don't know the range we use while loop. 
 
@@ -77,71 +68,66 @@ Jump Control : break, continue, return, throw, goto
 
 Day-3 : Pattern Printing
 ========================
-
 * Nested Loops *
+	- loops inside the loops.
+	- There are three type of Solutions for Any Problem.
+		1.Brute Force
+		2.Better
+		3.Optimal Solutions
 
-- loops inside the loops.
-- There are three type of Solutions for Any Problem.
-	1.Brute Force
-	2.Better
-	3.Optimal Solutions
+	- For Brute Force Most of the Solutions can be Written using 2 loops.
 
-- For Brute Force Most of the Solutions can be Written using 2 loops.
-
-- After This For Every Pattern Problems, we must Know 3 things
-	1.How many rows will Print.
-	2.How many columns are Needed.
-	3.must Know what to print and what not to print.
+	- After This For Every Pattern Problems, we must Know 3 things
+		1.How many rows will Print.
+		2.How many columns are Needed.
+		3.must Know what to print and what not to print.
 
 
 Day-4 : Switch Case Statements
 ==============================
-
-- cases have to be same type as expressions, must be constant or litral.
-- duplicates cases are not allowed.
-- break is used to terminate the sequence.
-- if break is not used, it will continue to next case.
-- default will execute when none of above does.
-- if default is not at the end, put break after it.
+	- cases have to be same type as expressions, must be constant or litral.
+	- duplicates cases are not allowed.
+	- break is used to terminate the sequence.
+	- if break is not used, it will continue to next case.
+	- default will execute when none of above does.
+	- if default is not at the end, put break after it.
 
 Syntax: 
-switch(expression){
-	case :
-		Statements;
-		break;
-	default:
-		Statements;
-}
+	switch(expression){
+		case :
+			Statements;
+			break;
+		default:
+			Statements;
+	}
 
 # Ternary Operator:
 	( condition ) ? Statement1 : Statement2;
 	(n == 1) ? print("Yes) : print("No")
 
-
 For-Each loop:
-- In, collection we don't have index value, in those situation we have to use for-each loop.
-Syntax:
-	for( var: arr ){
-		Statements;
-	}
+	- In, collection we don't have index value, in those situation we have to use for-each loop.
+	Syntax:
+		for( var: arr ){
+			Statements;
+		}
 
 Day-5 : Arrays
 ===============
+	Array : it is a data structure which collect similar type of data in continous location.
+	- In, C and C++ we have poiters so, element will be stored in continous format, while in Java we have not pointers so it will might store in random memory location.
 
-Array : it is a data structure which collect similar type of data in continous location.
-- In, C and C++ we have poiters so, element will be stored in continous format, while in Java we have not pointers so it will might store in random memory location.
+	Syntax:
+		datatype[] array_name;
 
-Syntax:
-	datatype[] array_name;
-
-Premitive : - They are can't be splitted oe divided.
-			- int, float, char ...
-Non-Premitive : - They can be divided.
-				- String, objects(created by user)
-				- class node{
-					int data;
-					node next;
-				}
+	Premitive : - They are can't be splitted oe divided.
+				- int, float, char ...
+	Non-Premitive : - They can be divided.
+					- String, objects(created by user)
+					- class node{
+						int data;
+						node next;
+					}
 
 - all the objects will be stored in heap memory.
 - all the references will be stored in stack memory.
@@ -157,50 +143,47 @@ camel case : arrayName
 
 - In, java it is prefer to use camel case to write production level codes.
 
+
 # Types of Printng Formats:
 -----------------------------
-1. using simple for loop:
-	for(int i =0; i<arr.length;i++){
-		System.out.print(arr[i]);
-	}
+	1. using simple for loop:
+		for(int i =0; i<arr.length;i++){
+			System.out.print(arr[i]);
+		}
 
-2. using for each loop:
-	for(int i : arr){
-		System.out.print(i + " ");
-	}
-	- here we don't need index value.
+	2. using for each loop:
+		for(int i : arr){
+			System.out.print(i + " ");
+		}
+		- here we don't need index value.
 
-3. using Arrays.toString() method:
-	System.out.print(Arrays.toString(arr));
-
+	3. using Arrays.toString() method:
+		System.out.print(Arrays.toString(arr));
 
 Declaring size of array and initilization by user:
 ---------------------------------------------------
+	- array having fixed size, if we decler it can't be changes.
+		int[] arr = new int[5];
+	- with the help of new keyword actual object is created into heap memory.
+	- whenever you assign or trying to get nth value of array it will throw Exception called "Array out of bond".
 
-- array having fixed size, if we decler it can't be changes.
-	int[] arr = new int[5];
-- with the help of new keyword actual object is created into heap memory.
-- whenever you assign or trying to get nth value of array it will throw Exception called "Array out of bond".
 
-
-Day-6 : 2D Arrays
+Day-6 : 2D Arrays:
 ==================
+	- It consists of row and columns.
+	- Syntax:
+		int[][] arr = new int[][];
 
-- It consists of row and columns.
-- Syntax:
-	int[][] arr = new int[][];
-
-- here row values are mandatory while columns can be anything.
-- first [] represents row and another is for column.
-- each row will act as an individual array.
+	- here row values are mandatory while columns can be anything.
+	- first [] represents row and another is for column.
+	- each row will act as an individual array.
 
 
-Day-7 : ArrayList
-===================
-
-- Array have fixed size, once we declare we can't change.
-- to incres ssize dynamically we have to use ArrayList, it belongs to Collection Framework.
-- Framework contains pre define methods and programs.
+Day-7 : ArrayList:
+==================
+	- Array have fixed size, once we declare we can't change.
+	- to incres ssize dynamically we have to use ArrayList, it belongs to Collection Framework.
+	- Framework contains pre define methods and programs.
 
 Syntax:
 	List<Wrapper Class> arraylist_name = new ArrayList<>();
@@ -214,35 +197,29 @@ Syntax:
 
 
 ArrayList Dynamic Nature:
-- when an element is trying to add, size get doubled.
-- when an element is trying to delete, size get half.
+	- when an element is trying to add, size get doubled.
+	- when an element is trying to delete, size get half.
 
 
 Sub-Arrays:
-------------
-- an element of an array are also part of sub-arrays in continious manner.
+	- an element of an array are also part of sub-arrays in continious manner.
 
 
 Day-8 : Recursion
 ====================
-
-- function calls itself till it's meet base condition called Recursion.
-- there are two types of Recursion, i. function calling same function. 
-									ii. function calling another function.
-- if we didn't wriite base condition properly we get Exception stackoverflow
-- recursions are use to break the code.
-- for every recursive call element get push into stack, after reaching base condition element will get pop.
-
+	- function calls itself till it's meet base condition called Recursion.
+	- there are two types of Recursion, i. function calling same function. 
+										ii. function calling another function.
+	- if we didn't wriite base condition properly we get Exception stackoverflow
+	- recursions are use to break the code.
+	- for every recursive call element get push into stack, after reaching base condition element will get pop.
 
 passed by value and passed by reference.
-----------------------------------------
-
-- In java, we don't have pointers so we can't pass references.
+	- In java, we don't have pointers so we can't pass references.
 
 
 Day-9 : Recursion (String)
 ==========================
-
 Q1: from a given string we have to a character using recursion.
 	- assume that we starting from two strings, initially output string is empty.
 	- we have few steps;
@@ -256,10 +233,8 @@ Q2: from a given string skip a word, print rest of character.
 
 
 Two Pointers approach:
------------------------
-
-- initilization of pointers
-- if you star first pointer at 0 and second pointer at lasst index, whenever both pointer cross each other break the loop, in between do relevent operations.
+	- initilization of pointers
+	- if you star first pointer at 0 and second pointer at lasst index, whenever both pointer cross each other break the loop, in between do relevent operations.
 
 Q. reverse an array using two pointers.
 	- first, initilize two pointers at 0 index and last index.
@@ -270,15 +245,14 @@ Q. reverse an array using two pointers.
 
 Day-10 : Strings
 =================
+	- Strings are classes.
+	- Arrays are objects.
+	- the  sequence of character calles Strings.
+	- String are immutable.
+	- all the array objects will be created in heap memory but  Strings are created inside heap memory in Pool.
+	- Once, a string got created, are fixed.
 
-- Strings are classes.
-- Arrays are objects.
-- the  sequence of character calles Strings.
-- String are immutable.
-- all the array objects will be created in heap memory but  Strings are created inside heap memory in Pool.
-- Once, a string got created, are fixed.
-
-example: String a = "Hello";
+	example: String a = "Hello";
 		String b = "Hello";
 		System.out.print(a == b);
 		- here both variable point at same memory location, so it gives output "true".
@@ -292,38 +266,33 @@ example: String a = "Hello";
 
 
 Subset
--------
-
-- for a given array we have to possible arrays it should be in a sequence but not continious.
-- in an array if we have n numbers of element we get 2^n subset.
+	- for a given array we have to possible arrays it should be in a sequence but not continious.
+	- in an array if we have n numbers of element we get 2^n subset.
 
 
 Backtracking
---------------
-
-- In recursion, we have two possibility either if or else.
-- In Backtracking, we have multiple possibility.
-- most of the problems, whenever we reach base case we have to print all basecase elements and remove last element in every recursive call.
+	- In recursion, we have two possibility either if or else.
+	- In Backtracking, we have multiple possibility.
+	- most of the problems, whenever we reach base case we have to print all basecase elements and remove last element in every recursive call.
 
 
 Day-11 : Duch National Flag Algorithm.
 =======================================
-
-- initialize three pointers, l at 0 index,m at 0 index and h at arr.length-1 position.
-- the elements between m, h should be sorted.
-- if arr[m] == 0, swap values of m, l and increase m, l.
-- if arr[m] == 2, swap values of m, h and decrease h, increase l.
-- if arr[m] == 1, increase m.
+	- initialize three pointers, l at 0 index,m at 0 index and h at arr.length-1 position.
+	- the elements between m, h should be sorted.
+	- if arr[m] == 0, swap values of m, l and increase m, l.
+	- if arr[m] == 2, swap values of m, h and decrease h, increase l.
+	- if arr[m] == 1, increase m.
 
 
 Collection Framework :
 ----------------------
 
-    List     |       set       |      map
---------------------------------------------------
-- ArrayList  | - HashSet       | - HashMap
-- LinkedList | - LinkedHashSet | - LinkedHashMap
-- Vector     | - TreeSet       | - TreeMap
+					List     |       set       |      map
+				--------------------------------------------------
+				- ArrayList  | - HashSet       | - HashMap
+				- LinkedList | - LinkedHashSet | - LinkedHashMap
+				- Vector     | - TreeSet       | - TreeMap
 
 - List, Set and Map are interfaces, rest of the all are classes.
 - Interface Contains incompelet Methods.
@@ -337,7 +306,6 @@ Syntax:	Set<Integer> values = new HashSet<>();
 
 Day-12 : Greedy Algorithm.
 ============================
-
 Greedy Algorithm:
 - n metting in room (Code)
 
@@ -554,8 +522,8 @@ Abstraction:
 
 ================================= Data Structure an Algorithm ===================================
 
-Linear Data Structure:
-LinkedList:
+Linear Data Structure  (LinkedList):
+======================================
 	- collection of similar type of data in random allocation.
 	- Types of LinkedList:
 		- Single LinkedList    1 -> 2 -> 3 -> 4
@@ -598,7 +566,6 @@ Selection Sort:
 
 Stacks and Quques:
 ==================
-
 Stacks:
 	 - it is a special data structure which follows "Last In First Out", which comes under linear data structure.
 	 - we will get the outputs in constant time for all stack operations O(1).
@@ -643,3 +610,59 @@ Quques:
 		offer(): add element into queue.
 		poll(): delete element from queue.
 		display(): print all element of the queue.
+
+
+Non linear Data Structure  (Trees):
+====================================
+
+tree creation:
+	- Trees are a-cyclic graphs.
+	- we have to create a node which contains data, left pointer, right pointer.
+	- starting node calles root node.
+	- eventually every node is root node.
+	- whatever nodes added to the root node callled child nodes.
+
+Types of Trees:
+	- N-ary Tree: n number of node connected to root node.
+	example:
+		- Trie's
+
+	- Binary Tree: at max 2 child node connected to root node.
+	example:
+		BST
+			left < root < right
+			advantages: 
+				- for BST if you print element in in-order traversal, elements get sorted order.
+			disadvantsges:
+				- the tree might squed means all nodes stored in linear way.
+				- so, the time complexity may O(n).
+		
+		AVL and Red-Black Tree
+			- AVL Tree is self balanced tree.
+			Types:
+				left-left
+				left-right
+				right-right
+				right-left
+
+		Segment Tree
+			- in an array, if we want to get sum of particular range value we use simple for loop so time complexity will be O(n).
+			- but we want to get output in O(logn), so we use segment tree.
+
+- to travel from root node to leaf node we have two ways of traversal.
+	- BFS (Bredth First Search)
+		- level order traversal
+	
+	- DFS (Depth First Search)
+		in-order traversal (left, root, right)
+		pre-order traversal (root, left, right)
+		post-order traversal (left, right, root)
+
+Complete Binary Tree:
+	- every level should be completed and it starts from left to right. 
+Full Binary Tree:
+	- every node either 0 or 2 child.
+Perfect Binary Tree:
+	- every level should complete and every node has two child.
+Balanced Tree:
+	- height of left treee - heigh of right tree == -1, 0 ,1 then it is balanced tree.
