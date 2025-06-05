@@ -287,12 +287,11 @@ Day-11 : Duch National Flag Algorithm.
 
 Collection Framework :
 ----------------------
-
-					List     |       set       |      map
-				--------------------------------------------------
-				- ArrayList  | - HashSet       | - HashMap
-				- LinkedList | - LinkedHashSet | - LinkedHashMap
-				- Vector     | - TreeSet       | - TreeMap
+		    List     |       set       |      map
+		--------------------------------------------------
+		- ArrayList  | - HashSet       | - HashMap
+		- LinkedList | - LinkedHashSet | - LinkedHashMap
+		- Vector     | - TreeSet       | - TreeMap
 
 - List, Set and Map are interfaces, rest of the all are classes.
 - Interface Contains incompelet Methods.
@@ -402,11 +401,7 @@ example:
 	- if we have negative value, product of prefix and sufix element will be positive.
 	- initialize maximum variable to extreme negative.
 
-
-
-88, 4, 56, 15, 229, 857, 1358, 424, 162, 1011 = leetcode
---------------------------------------------------------
-
+---------------------------------------------------------------------------------------------------------------------------------------------
 leetcode problem - koko eating bananas
 
 - whatever max element in array, check for that.
@@ -430,13 +425,13 @@ OOPS (Object Oriented Programming):
 
 Class: class is an virtual entity and blue print for object.
 Object: instance of a class
-		we can call methods which present in that particular class by creating object for that class.
+	we can call methods which present in that particular class by creating object for that class.
 Constructor: initialize an object
-			- Default Constructor.
-				it is for every class.
+	- Default Constructor.
+		it is for every class.
 
-			- Parameterized Constructor.
-				it contains some parameter.
+	- Parameterized Constructor.
+		it contains some parameter.
 
 
 Inheritance:
@@ -497,19 +492,20 @@ Interface:
 	- abstract methods are incompelet.
 
 
-Access Modifier: 				where to accessable
-
-				  public 		 private		protected			default
-within class		+				+				+					+
-within file			+				-				+					+
-within package		+				-				+					+
-outside package		+				-				+					-
-parent class		+				-				-					-
-child class			+				-				+					-
+Access Modifier: 		where to accessable
+----------------------------------------------------------------------------
+		   |   public 	|   private  |   protected   |   default   |
+----------------------------------------------------------------------------
+within class	   |	 +	|      +     | 	     +	     |	   +   	   |
+within file	   |	 +	|      -     |       + 	     |     +	   |
+within package	   |	 +	|      -     |	     +	     |	   +	   |
+outside package	   |	 +	|      -     |	     +	     |	   -	   |
+parent class	   |	 +	|      -     |	     -	     |	   -	   |
+child class	   |	 +	|      -     |	     +	     |	   -	   |
+----------------------------------------------------------------------------
 
 Architecture:
 	Packages -> Files -> Class -> Methods ->Statements.
-
 
 Abstraction:
 - incompelet means, defenation is missing in a method.
@@ -519,8 +515,7 @@ Abstraction:
 - to implementing interface access modifier should be public.
 
 
-
-================================= Data Structure an Algorithm ===================================
+========================================== Data Structure an Algorithm ==========================================
 
 Linear Data Structure  (LinkedList):
 ======================================
@@ -536,14 +531,14 @@ Linear Data Structure  (LinkedList):
 	
 Sorting:
 ========
-						Best Case		Avg Case		Worst Case
-	- Bubble Sort		  O(n)			O(n^2)				O(n^2)
-	- Selection Sort	  O(n^2)		O(n^2)				O(n^2)
-	- Insertion Sort	  O(n)			O(n^2)				O(n^2)
-	- Merge Sort		O(n log	n)		O(n log	n)			O(n log	n)
-	- Quick Sort		O(n log	n)		O(n log	n)			O(n^2)
-
-
+				Best Case	       Avg Case	      	       Worst Case
+------------------------------------------------------------------------------------------------
+	- Bubble Sort		  O(n)			O(n^2)			O(n^2)
+	- Selection Sort	  O(n^2)		O(n^2)			O(n^2)
+	- Insertion Sort	  O(n)			O(n^2)			O(n^2)
+	- Merge Sort		O(n log	n)		O(n log	n)		O(n log	n)
+	- Quick Sort		O(n log	n)		O(n log	n)		O(n^2)
+------------------------------------------------------------------------------------------------
 
 - Count Sort
 - Heap Sort
@@ -564,7 +559,7 @@ Selection Sort:
 
 
 
-Stacks and Quques:
+Stacks and Queues:
 ==================
 Stacks:
 	 - it is a special data structure which follows "Last In First Out", which comes under linear data structure.
@@ -589,7 +584,7 @@ Stacks:
 			- return top + 1.
 
 
-Quques:
+Queues:
  	- it is a special data structure which follows "First In First Out", which comes under linear data structure.
 	- it helps to solve heaps problems.
 	
@@ -600,13 +595,12 @@ Quques:
 		- operations perfomes from both ends.
 
 	Priority Queue:
-		Min Quque:
+		Min Queue:
 			- whatever order of elements you added, elements will arange in assending order.
-		
-		Max Quque:
+		Max Queue:
 			- whatever order of elements you added, elements will arange in desending order.
 
-	stack methods:
+	Queue methods:
 		offer(): add element into queue.
 		poll(): delete element from queue.
 		display(): print all element of the queue.
