@@ -625,7 +625,11 @@ tree creation:
 Types of Trees:
 	- N-ary Tree: n number of node connected to root node.
 	example:
-		- Trie's
+		Trie's
+			- we have to create a node which can store int[] size of 26, which can store char data, also store boolean flag.
+			- the last node need to change the flag to true.
+			advantages:
+				- to get faster traversal for strings. 
 
 	- Binary Tree: at max 2 child node connected to root node.
 	example:
@@ -648,6 +652,7 @@ Types of Trees:
 		Segment Tree
 			- in an array, if we want to get sum of particular range value we use simple for loop so time complexity will be O(n).
 			- but we want to get output in O(logn), so we use segment tree.
+			- for segment tree worst case time complexity is (logn)^2, wwhich is better then O(n)^2.
 
 - to travel from root node to leaf node we have two ways of traversal.
 	- BFS (Bredth First Search)
@@ -666,3 +671,23 @@ Perfect Binary Tree:
 	- every level should complete and every node has two child.
 Balanced Tree:
 	- height of left treee - heigh of right tree == -1, 0 ,1 then it is balanced tree.
+
+
+Heaps:
+=======
+	- Heap data structure will store the data in arrays.
+	- it will be stored by trees and the values will be arranged by the tree(Complete Binary Tree).
+	- with the help of Priority Quques Heaps got create.
+	- the process of insertion called "heapify".
+	
+	Types:
+		Bottom to Top
+			- here, nodes are placed according to sorted order.
+			- if we add new node at bottom, it will automitacally placed on its right place.
+			- it will compare the node value to its parent value, if parent value is bigger swap both values and do it till root node.
+			- at the end newly inserted value get its correct place.
+			- this concept run from bottom to top, called "heapify".
+		
+		Top to Bottom
+			- by comparing the newly inserted element with its parent and swapping if necessary.
+			- here, each node get insert from root node by maintaining the heap property.
