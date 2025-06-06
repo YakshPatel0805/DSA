@@ -1,177 +1,111 @@
-// creation of a binary tree with insertion, deletion, search, inorder traversal, height, width, and balance checking
-
+// creation of a tree based on user.
 import java.util.*;
-class Node {
-    int data;
-    Node right;
-    Node left;
 
-    Node(int data) {
-        this.data = data;
-        this.right = null;
-        this.left = null;
-    }
-}
+class BinaryTree {
+    static class Node {
+        int value;
+        Node left;
+        Node right;
 
-public class BinaryTree {
-
-    public static Node insert(Node root, int data) {
-        if (root == null) {
-            return new Node(data);
+        public Node(int value) {
+            this.value = value;
         }
-
-        if (root.data == data) {
-            System.out.println("Data is present in a tree");
-            return root;
-        }
-
-        if (root.data > data) {
-            root.left = insert(root.left, data);
-        } else {
-            root.right = insert(root.right, data);
-        }
-
-        return root;
     }
 
-    public static Node delete(Node root, int data) {
-        if (root == null) {
-            System.out.println("Tree is Not Present");
-            return root;
-        }
-        if (root.data > data) {
-            root.left = delete(root.left, data);
-        } else if (root.data < data) {
-            root.right = delete(root.right, data);
-        } else {
-            if (root.left == null) {
-                return root.right;
-            } else if (root.right == null) {
-                return root.left;
-            }
-            Node minLargerNode = root.right;
-            while (minLargerNode.left != null) {
-                minLargerNode = minLargerNode.left;
-            }
-            root.data = minLargerNode.data;
-            root.right = delete(root.right, minLargerNode.data);
-        }
-        return root;
+    public BinaryTree() {
     }
 
-    public static void search(Node root, int data) {
-        if (root == null) {
-            System.out.println("Tree is Not Present");
+    private Node root;
+
+    public void populate(Scanner in) {
+        System.out.println("Enter the root value:- ");
+        int value = in.nextInt();
+        root = new Node(value);
+        populate(in, root);
+    }
+
+    public void populate(Scanner in, Node node) {
+        System.out.println("Do you want to Enter the left of root value (y/n):- " + node.value);
+        String inp = in.next();
+        char left = inp.charAt(0);
+        if (left == 'y' || left == 'Y') {
+            System.out.println("Enter the left value of " + node.value);
+            int value = in.nextInt();
+            node.left = new Node(value);
+            populate(in, node.left);
+        }
+
+        System.out.println("Do you want to Enter the right of root value (y/n):- " + node.value);
+        char right = inp.charAt(0);
+        if (right == 'y' || right == 'Y') {
+            System.out.println("Enter the right value of " + node.value);
+            int value = in.nextInt();
+            node.right = new Node(value);
+            populate(in, node.right);
+        }
+    }
+
+    public void display() {
+        display(root, "");
+    }
+
+    private void display(Node node, String indent) {
+        if (node == null) {
             return;
         }
-
-        if (root.data == data) {
-            System.out.println("Data " + data + " found");
-            return;
-        }
-
-        if (root.data > data) {
-            search(root.left, data);
-        } else {
-            search(root.right, data);
-        }
+        System.out.println(indent + node.value);
+        display(node.left, indent + "\t");
+        display(node.right, indent + "\t");
     }
 
-    public static void inorder(Node root) {
-        if (root != null) {
-            inorder(root.left);
-            System.out.print(root.data + " ");
-            inorder(root.right);
-        }
+
+    public void preOrder() {
+        System.out.print("Pre-order: ");
+        preOrder(root);
+        System.out.println();
     }
 
-    public static int height(Node root) {
-        if (root == null) {
-            return 0;
-        } else {
-            int leftHeight = height(root.left);
-            int rightHeight = height(root.right);
-            return Math.max(leftHeight, rightHeight) + 1;
-        }
+    private void preOrder(Node node) {
+        if (node == null) return;
+        System.out.print(node.value + " ");
+        preOrder(node.left);
+        preOrder(node.right);
     }
 
-    public static int width(Node root) {
-        if (root == null) {
-            return 0;
-        } else {
-            int leftWidth = width(root.left);
-            int rightWidth = width(root.right);
-            return leftWidth + rightWidth + 1;
-        }
+    public void inOrder() {
+        System.out.print("In-order: ");
+        inOrder(root);
+        System.out.println();
     }
 
-    public static boolean isBalanced(Node root) {
-        if (root == null) {
-            return true;
-        }
+    private void inOrder(Node node) {
+        if (node == null) return;
+        inOrder(node.left);
+        System.out.print(node.value + " ");
+        inOrder(node.right);
+    }
 
-        int leftHeight = height(root.left);
-        int rightHeight = height(root.right);
+    public void postOrder() {
+        System.out.print("Post-order: ");
+        postOrder(root);
+        System.out.println();
+    }
 
-        if (Math.abs(leftHeight - rightHeight) <= 1 && isBalanced(root.left) && isBalanced(root.right)) {
-            return true;
-        }
-
-        return false;
+    private void postOrder(Node node) {
+        if (node == null) return;
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.print(node.value + " ");
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        Node r = null;
+        Scanner in = new Scanner(System.in);
+        BinaryTree tree = new BinaryTree();
+        tree.populate(in);
+        tree.display();
 
-        while (true) {
-            System.out.print("Enter Choice: ");
-            int ch = scanner.nextInt();
-            switch (ch) {
-                case 1:
-                    System.out.print("Enter Data to Insert: ");
-                    int dataInsert = scanner.nextInt();
-                    r = insert(r, dataInsert);
-                    break;
-
-                case 2:
-                    System.out.print("Enter Data to Search: ");
-                    int dataSearch = scanner.nextInt();
-                    search(r, dataSearch);
-                    break;
-
-                case 3:
-                    System.out.print("Enter Data to Delete: ");
-                    int dataDelete = scanner.nextInt();
-                    r = delete(r, dataDelete);
-                    break;
-
-                case 4:
-                    System.out.print("Inorder Traversal of the tree is: ");
-                    inorder(r);
-                    System.out.println();
-                    break;
-
-                case 5:
-                    System.out.println("Height of the tree is: " + height(r));
-                    break;
-
-                case 6:
-                    System.out.println("Width of the tree is: " + width(r));
-                    break;
-
-                case 7:
-                    if (isBalanced(r)) {
-                        System.out.println("Tree is balanced");
-                    } else {
-                        System.out.println("Tree is not balanced");
-                    }
-                    break;
-
-                case 8:
-                    scanner.close();
-                    return;
-            }
-        }
+        tree.preOrder();
+        tree.inOrder();
+        tree.postOrder();
     }
 }
