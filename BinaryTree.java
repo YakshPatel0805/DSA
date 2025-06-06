@@ -120,12 +120,33 @@ public class BinaryTree {
         return false;
     }
 
+    static void levelOrder(Node root){
+        if (root == null){
+            return;
+        }
+        else{
+            Queue<Node> queue = new LinkedList<>();
+            queue.add(root);
+            while (!queue.isEmpty()){
+                Node current = queue.poll();
+                System.out.print(current.data + " ");
+                if (current.left != null){
+                    queue.add(current.left);
+                }
+                if (current.right != null){
+                    queue.add(current.right);
+                }
+            }
+        }
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Node r = null;
 
         while (true) {
-            System.out.print("Enter Choice: ");
+            System.out.print(" 1 for Insert,\n 2 for Search,\n 3 for Delete,\n 4 for Inorder Traversal,\n 5 for Height,\n 6 for Width,\n 7 for Balance Check,\n 8 for Level Order Traversal,\n 9 to Exit\n");
+            System.out.print("Enter your choice: ");
             int ch = scanner.nextInt();
             switch (ch) {
                 case 1:
@@ -169,6 +190,12 @@ public class BinaryTree {
                     break;
 
                 case 8:
+                    System.out.print("Level Order Traversal of the tree is: ");
+                    levelOrder(r);
+                    System.out.println();
+                    break;
+                case 9:
+                    System.out.println("Exiting...");
                     scanner.close();
                     return;
             }
